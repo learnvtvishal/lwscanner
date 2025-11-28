@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Learn With Vishal — QR Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #000000 0%, #111111 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+
+  .scanner-box {
+    background: #000;
+    border: 5px solid #d4af37;
+    border-radius: 28px;
+    padding: 28px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(212,175,55,0.3);
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px rgba(212,175,55,0.5));
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  p.tagline {
+    font-size: 13px;
+    color: #d4af37;
+    margin-bottom: 16px;
+  }
+
+  .qr-frame {
+    border: 3px solid #d4af37;
+    border-radius: 16px;
+    background: #fff;
+    margin: 0 auto 16px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .qr-frame img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 12px;
+  }
+
+  .socials a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    transition: all 0.3s ease;
+  }
+
+  .socials a:hover {
+    background: #d4af37;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(212,175,55,0.6);
+  }
+
+  .socials svg {
+    width: 22px;
+    height: 22px;
+    fill: #d4af37;
+    transition: fill 0.3s ease;
+  }
+
+  .socials a:hover svg {
+    fill: #000;
+  }
+
+  footer {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #d4af37;
+    text-shadow: 0 0 6px rgba(212,175,55,0.3);
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="scanner-box">
+    <img src="Learn With Vishal Logo.jpeg" alt="Learn With Vishal Logo" class="logo">
+    <h1>Learn With Vishal</h1>
+    <p class="tagline">Markets made Simple</p>
+
+    <div class="qr-frame">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/learn_with_vishal.in/" alt="QR Code">
+    </div>
+
+    <div class="socials">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/learn_with_vishal.in/" target="_blank" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7.25a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm6.25-.75a1 1 0 110 2 1 1 0 010-2z"/></svg>
+      </a>
+
+      <!-- Twitter/X -->
+      <a href="https://x.com/vishalmehta29" target="_blank" title="Twitter / X">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.25 3h2.17l-4.75 5.43L21 21h-5.44l-4.27-6.4L6.4 21H4.22l5.06-5.79L3 3h5.52l3.82 5.65L18.25 3zM9.42 5H5.91l8.75 13h3.51L9.42 5z"/></svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/vishalmehta-cmt/" target="_blank" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5.001 2.5 2.5 0 01.01-5zM3 9h4v12H3zM9 9h3.8v1.71h.05c.53-.95 1.82-1.96 3.75-1.96 4 0 4.74 2.63 4.74 6.05V21h-4v-5.27c0-1.26-.02-2.88-1.75-2.88-1.75 0-2.02 1.37-2.02 2.79V21H9z"/></svg>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@learnwithvishal-cmt" target="_blank" title="YouTube">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.8 8s-.2-1.4-.8-2a2.8 2.8 0 00-2-.8C16.2 5 12 5 12 5s-4.2 0-7 .2a2.8 2.8 0 00-2 .8c-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6C2 14.4 2.2 16 2.2 16s.2 1.4.8 2a2.8 2.8 0 002 .8c2.8.2 7 .2 7 .2s4.2 0 7-.2a2.8 2.8 0 002-.8c.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.6C22 9.6 21.8 8 21.8 8zM10 14.7V9.3l5.3 2.7L10 14.7z"/></svg>
+      </a>
+    </div>
+
+    <footer>🌟 Connect. Learn. Grow. 🚀</footer>
+  </div>
+</body>
+</html>
